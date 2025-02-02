@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+*.venv
+
+# Logs and Temp Files
+*.log
+*.out
+*.tmp
+*.swp
+*.swo
+
+# Compiled Files
+*.so
+*.dll
+*.dylib
+*.exe
+*.o
+*.a
+
+# Data and Model Files
+*.pkl
+*.json
+*.csv
+*.tsv
+*.sqlite
+*.db
+
+# Secrets
+.env
+*.key
+*.pem
+config.yaml
+
+# Large Files
+memory.json
+test.pkl
+train.pkl
+ensemble_model.pkl
+random_forest_model.pkl
