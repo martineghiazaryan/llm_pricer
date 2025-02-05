@@ -33,6 +33,7 @@ env/
 *.csv
 *.tsv
 *.sqlite
+*.sqlite3
 *.db
 
 # Secrets
@@ -47,3 +48,5 @@ test.pkl
 train.pkl
 ensemble_model.pkl
 random_forest_model.pkl
+
+products_vectorestore/

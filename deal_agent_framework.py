@@ -10,6 +10,7 @@ from agents.planning_agent import PlanningAgent
 from agents.deals import Opportunity
 from sklearn.manifold import TSNE
 import numpy as np
+from agents.messaging_agent import MessagingAgent
 
 
 # Colors for logging
@@ -45,12 +46,13 @@ class DealAgentFramework:
         client = chromadb.PersistentClient(path=self.DB)
         self.memory = self.read_memory()
         self.collection = client.get_or_create_collection('products')
+        self.messenger = MessagingAgent()
         self.planner = None
 
     def init_agents_as_needed(self):
         if not self.planner:
             self.log("Initializing Agent Framework")
-            self.planner = PlanningAgent(self.collection)
+            self.planner = PlanningAgent(self)
             self.log("Agent Framework is ready")
         
     def read_memory(self) -> List[Opportunity]:
